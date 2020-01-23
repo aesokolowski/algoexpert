@@ -1,0 +1,21 @@
+{
+  "name": "algoexpert",
+  "version": "0.0.1",
+  "description": "github repository for my solutions to algoexpert.io interview practice problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/aesokolowski/algoexpert"
+  },
+  "keywords": [
+    "practice",
+    "algorithms",
+    "data_structures",
+    "sorting"
+  ],
+  "author": "Andrew E. Sokolowski",
+  "license": "ISC"
+}
