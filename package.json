@@ -17,5 +17,9 @@
     "sorting"
   ],
   "author": "Andrew E. Sokolowski",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
 }
