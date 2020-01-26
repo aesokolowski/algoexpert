@@ -1,3 +1,5 @@
+//  Andrew Sokolowski      Dec 2019/Jan 2020
+
 function twoNumberSum(array, targetSum) {
   array.sort((n, m) => n - m);
 	

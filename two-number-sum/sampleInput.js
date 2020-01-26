@@ -1,3 +1,5 @@
+//  Andrew Sokolowski      Jan 2020
+
 const twoNumberSum = require('./twoNumberSum');
 
 function sample2NumSum() {

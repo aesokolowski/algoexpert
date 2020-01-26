@@ -10,3 +10,7 @@ going on if it's not obvious (like Bubble Sort).
 Maybe I'll try another language if I get bored with JavaScript (or suddenly
 have an upcoming tech interview in C++, Java, or Python) but I like it
 for this algorithm stuff because it's close to pseudocode and has braces.
+
+### To run sample tests:
+enter 'node index' from this folder to run all tests sequentially or enter
+'node attempt' within a test folder to run that single test
