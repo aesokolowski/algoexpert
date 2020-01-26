@@ -26,4 +26,22 @@ function createBST(val) {
   };
 }
 
-module.exports = createBST;
+function inOrderTraverse(bst, str) {
+  if (bst.left !== null) {
+    str = inOrderTraverse(bst.left, str);
+  }
+
+  str += bst.value + ' ';
+
+  if (bst.right !== null) {
+    str = inOrderTraverse(bst.right, str);
+  }
+
+  return str;
+}
+
+function toString(bst) {
+  return inOrderTraverse(bst, '');
+}
+
+module.exports = { createBST, toString };
