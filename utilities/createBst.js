@@ -6,20 +6,24 @@ function createBST(val) {
     value: val,
     right: null,
     left: null,
-    insert: function(valToInsert) {
-      if (valToInsert < value) {
-        if (left === null) {
-          left = createBST(valToInsert);
+    insert: function(value) {
+      if (value < this.value) {
+        if (this.left === null) {
+          this.left = createBST(value);
         } else {
-          left.insert(valToInsert);
+          this.left.insert(value);
         }
       } else {
-        if (right === null) {
-          right = createBST(valToInsert);
+        if (this.right === null) {
+          this.right = createBST(value);
         } else {
-          right.insert(valToInsert);
+          this.right.insert(value);
         }
       }
+
+      return this;
     }
   };
 }
+
+module.exports = createBST;
