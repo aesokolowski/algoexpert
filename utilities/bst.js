@@ -1,5 +1,7 @@
-// translated from class on algoexpert.io to factory function for no
-// particular reason -- Andrew Sokolowski -- Jan. 2020
+// createBST translated from BST class on algoexpert.io to factory function for 
+// no particular reason -- Andrew Sokolowski -- Jan. 2020
+// also included is a toString(...) function which prints values in the
+// search tree from lowest to highest
 
 function createBST(val) {
   return {
@@ -40,8 +42,26 @@ function inOrderTraverse(bst, str) {
   return str;
 }
 
+function preOrderTraverse(bst, str) {
+  str += bst.value + ' ';
+
+  if (bst.left !== null) {
+    str = preOrderTraverse(bst.left, str);
+  }
+
+  if (bst.right !== null) {
+    str = preOrderTraverse(bst.right, str);
+  }
+
+  return str;
+}
+
 function toString(bst) {
   return inOrderTraverse(bst, '');
 }
 
-module.exports = { createBST, toString };
+function toTree(bst) {
+  return preOrderTraverse(bst, '');
+}
+
+module.exports = { createBST, toString, toTree };

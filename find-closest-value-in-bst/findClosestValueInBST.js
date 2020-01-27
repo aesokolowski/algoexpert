@@ -7,7 +7,7 @@ function findClosestValueInBst(tree, target) {
   if (target === value) {
     return target;
   }
-	
+
   difference = Math.abs(target - value);
 	
   if (target < value) {
