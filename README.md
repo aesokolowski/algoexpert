@@ -12,5 +12,10 @@ have an upcoming tech interview in C++, Java, or Python) but I like it
 for this algorithm stuff because it's close to pseudocode and has braces.
 
 ### To run sample tests:
-enter 'node index' from this folder to run all tests sequentially or enter
-'node attempt' within a test folder to run that single test
+if you don't have Node installed globally, install it
+
+to run a single test, navigate to the desired folder and enter 'node attempt'
+to run all the tests, you'd probably want to create a file, so from the root
+of this project enter 'node index > results.txt && code results.txt'. Obviously
+code can be replaced with vi or whatever program you wish to view the results
+in

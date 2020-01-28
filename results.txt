@@ -1,0 +1,109 @@
+Two Number Sum
+--------------
+find a pair of numbers in a given array that adds up to the given key
+note: each array is sorted the second time because the algorithm sorts it the
+first time
+
+input array1: [ 5, -2, -10, 6 ]
+input key1: 11
+output 1: [ 5, 6 ]
+
+input array1: [ -10, -2, 5, 6 ]
+input key2: 12
+output 2: []
+
+input array2: [ 1, 8, -7, 19, 22, 10009, 34, -34, -10 ]
+input key3: -2
+output 3: [ -10, 8 ]
+
+input array2: [ -34, -10, -7, 1, 8, 19, 22, 34, 10009 ]
+input key4: 10009
+output 4: []
+
+Find Closest Value in Binary Search Tree
+----------------------------------------
+Pretty self-explanatory, the hardest part was figuring out how to
+recursively keep track of the closest number throughout the traversal,
+I find that kind of mind-bending sometimes.
+I don't recall why I didn't just use an outside (static?) variable?
+One thing to note is that in the case of two equally close values the lower one
+will be returned since it was encountered first.
+
+input 1 (pre-order traversal): 100 95 -25 0 97 105 107 106 10001 
+"sorted" (in-order traversal): -25 0 95 97 100 105 106 107 10001 
+key 1: 106
+result 1: 106
+key 2: 109
+result 2: 107
+key 3: 7000
+result 3: 10001
+
+input 2: 100 50 0 -50 -100 -150 -125 -120 -110 
+"sorted": -150 -125 -120 -110 -100 -50 0 50 100 
+key 4: -120
+result 4: -120
+key 5: 25
+result 5: 0
+key 6: 7000
+result 6: 100
+
+Branch Sums
+-----------
+Find the "branch sum" for each path you can take from a leaf to the root, return
+in an array.
+
+myBT: used the factory function to insert initial value and the insert method to
+add an array of 99 initial values
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+myBT, breadth-first traversal: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 
+myBT, depth-first traversal: 1 2 4 8 16 32 64 65 33 66 67 17 34 68 69 35 70 71 9 18 36 72 73 37 74 75 19 38 76 77 39 78 79 5 10 20 40 80 81 41 82 83 21 42 84 85 43 86 87 11 22 44 88 89 45 90 91 23 46 92 93 47 94 95 3 6 12 24 48 96 97 49 98 99 25 50 100 51 13 26 52 53 27 54 55 7 14 28 56 57 29 58 59 15 30 60 61 31 62 63 
+branchSums(myBT): [ 127,
+  128,
+  130,
+  131,
+  134,
+  135,
+  137,
+  138,
+  142,
+  143,
+  145,
+  146,
+  149,
+  150,
+  152,
+  153,
+  158,
+  159,
+  161,
+  162,
+  165,
+  166,
+  168,
+  169,
+  173,
+  174,
+  176,
+  177,
+  180,
+  181,
+  183,
+  184,
+  190,
+  191,
+  193,
+  194,
+  197,
+  98,
+  101,
+  102,
+  104,
+  105,
+  109,
+  110,
+  112,
+  113,
+  116,
+  117,
+  119,
+  120 ]

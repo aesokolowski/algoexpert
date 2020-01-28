@@ -16,4 +16,8 @@ function branchSums(root) {
       }
     }
   })(root, 0);
+
+  return branches;
 }
+
+module.exports = branchSums;
