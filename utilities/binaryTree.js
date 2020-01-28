@@ -16,20 +16,20 @@ function createBinaryTree(val) {
       const queue = [this];
 
       while (queue.length > 0) {
-        let current = queue.shift();
+        let current = queue.pop();
 
         if (current.left === null) {
           current.left = createBinaryTree(values[i]);
           break;
         }
 
-        queue.push(current.left);
+        queue.unshift(current.left);
         if (current.right === null) {
           current.right = createBinaryTree(values[i]);
           break;
         }
 
-        queue.push(current.right);
+        queue.unshift(current.right);
       }
 
       this.insert(values, i + 1);
