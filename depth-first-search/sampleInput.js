@@ -10,12 +10,22 @@ function sampleDFS() {
   const node2 = new Node('E').addChild('D')
                              .addChild('A');
 
+  console.log('\nDepth-First Search');
+  console.log('------------------');
+  console.log('Each node has an array of children, which may contain other ' +
+      'Nodes. Perform a\ndepth-first search on each, and return an array of ' +
+      'all Nodes in each order.');
+
   node2.children[0].addChild('W');
   node2.children[1].addChild('R');
   node2.children[1].children[0].addChild('D');
 
-  console.log('myNode:', myNode.depthFirstSearch());
-  console.log('node2:', node2.depthFirstSearch());
+  console.log('\nmyNode:');
+  console.dir(myNode);
+  console.log('myNode.depthFirstSearch():', myNode.depthFirstSearch());
+  console.log('\nnode2:');
+  console.dir(node2);
+  console.log('node2.depthFirstSearch():', node2.depthFirstSearch());
 }
 
 module.exports = sampleDFS;
